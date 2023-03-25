@@ -1,12 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathName } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
 import styles from '@/app/styles/NavBar.module.css';
 
 export default function NavBar() {
-  const pathName = usePathName();
+  const pathName = usePathname();
   const routes = [
     {
       path: '/',
