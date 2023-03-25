@@ -1,14 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { usePathName } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
 import styles from '@/app/styles/NavBar.module.css';
 
 export default function NavBar() {
-  const segment = useSelectedLayoutSegment();
-  let currentRoute = '/';
-  if (segment) currentRoute = '/' + segment;
+  const pathName = usePathName();
   const routes = [
     {
       path: '/',
@@ -40,9 +38,7 @@ export default function NavBar() {
             key={uuidv4()}
             href={route.path}
             className={
-              currentRoute === route.path
-                ? styles['-active']
-                : styles['-nonActive']
+              pathName === route.path ? styles['-active'] : styles['-nonActive']
             }>
             {route.title}
           </Link>
