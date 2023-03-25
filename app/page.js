@@ -25,7 +25,7 @@ export default async function Home() {
     return (
       <>
         <div className='-center'>
-          <h1>Next Friday's list will be available on Monday</h1>
+          <h1>Next Friday&apos;s list will be available on Monday</h1>
         </div>
       </>
     );
