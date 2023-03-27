@@ -8,7 +8,7 @@ import styles from '@/app/styles/NavBar.module.css';
 export default function NavBar({ data }) {
   const pathName = usePathname();
   let showWait = false;
-  if (data.length > 0) showWait = true;
+  if (data.length > 1) showWait = true;
   const routes = [
     {
       path: '/',

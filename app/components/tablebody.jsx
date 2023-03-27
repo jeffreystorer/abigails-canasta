@@ -1,9 +1,7 @@
-import { RANGES } from '@/app/constants';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function TableBody({ type, data }) {
-  const index = RANGES[type];
-  const values = data.valueRanges[index].values;
+  const values = data.values;
   if (values.length === 1)
     return (
       <tr key={uuidv4()}>

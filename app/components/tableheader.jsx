@@ -1,9 +1,14 @@
-import { RANGES } from '@/app/constants';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function TableHeader({ type, data }) {
-  const index = RANGES[type];
-  const values = data.valueRanges[index].values;
+  const values = data.values;
+  if (values.length === 0) {
+    return (
+      <tr key={uuidv4()}>
+        <th className='-th'></th>
+      </tr>
+    );
+  }
   const ths = values[0];
   ths.shift();
   let cols = [''];
