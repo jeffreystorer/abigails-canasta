@@ -10,10 +10,4 @@ const WAIT_URL =
   BASE_URL + SHEET_ID + '/values/Wait%20List%20Last%20Week' + KEY;
 const HOST_URL = BASE_URL + SHEET_ID + '/values/Host' + KEY;
 const PLAYERINFO_URL = BASE_URL + SHEET_ID + '/values/Player%20Info' + KEY;
-const RANGES = {
-  want: 0,
-  host: 1,
-  playerinfo: 2,
-  wait: 3,
-};
-export { PLAYERS_URL, WANT_URL, WAIT_URL, HOST_URL, PLAYERINFO_URL, RANGES };
+export { PLAYERS_URL, WANT_URL, WAIT_URL, HOST_URL, PLAYERINFO_URL };
