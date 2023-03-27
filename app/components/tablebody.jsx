@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function TableBody({ type, data }) {
   const values = data.values;
-  if (values.length === 1)
+  if (values.length < 2)
     return (
       <tr key={uuidv4()}>
         <td>
