@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { SHEET_URL } from '@/app/constants';
+import { PLAYERS_URL } from '@/app/constants';
 import { v4 as uuidv4 } from 'uuid';
 
 async function getData() {
-  const res = await fetch(SHEET_URL);
+  const res = await fetch(PLAYERS_URL);
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
@@ -20,7 +20,6 @@ export const revalidate = 60;
 
 export default async function Home() {
   const data = await getData();
-  console.log('😊😊 data', data);
   if (data.length === 0)
     return (
       <>

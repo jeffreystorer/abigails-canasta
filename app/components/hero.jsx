@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import NavBar from '@/app/components/navbar';
 import Banner from '@/public/abigails-banner.png';
-export default function Hero() {
+export default function Hero({ data }) {
   return (
     <header className='-center -header'>
       <Image
@@ -15,7 +15,7 @@ export default function Hero() {
       <h1>Canasta</h1>
       <br />
       <br />
-      <NavBar />
+      <NavBar data={data} />
       <br />
       <br />
     </header>
