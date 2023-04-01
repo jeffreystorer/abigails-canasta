@@ -15,11 +15,11 @@ export default function HStack({ spacing = 0, children }) {
     <div className='-hstack'>
       {children.map((child, index) =>
         index === 0 ? (
-          <div id={uuidv4()} key={uuidv4()} className='marginleft0px'>
+          <div key={uuidv4()} className='marginleft0px'>
             {child}
           </div>
         ) : (
-          <div id={uuidv4()} key={uuidv4()} className={className}>
+          <div key={uuidv4()} className={className}>
             {child}
           </div>
         )
