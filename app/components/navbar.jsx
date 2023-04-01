@@ -45,9 +45,8 @@ export default function NavBar({ data }) {
           {routes
             .filter((route) => route.show === true)
             .map((route) => (
-              <div className={styles['-topNav a']}>
+              <div key={uuidv4()} className={styles['-topNav a']}>
                 <Link
-                  key={uuidv4()}
                   href={route.path}
                   className={
                     pathName === route.path

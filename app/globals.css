@@ -241,21 +241,14 @@ th::after {
 .wfit {
   width: fit-content;
 }
-<<<<<<< HEAD:app/styles/App.css
-
-=======
->>>>>>> 53cb898d8957f2145e9d7a467b2682c0888db886:app/globals.css
 .-hstack {
   display: flex;
 }
 
-<<<<<<< HEAD:app/styles/App.css
-=======
 .-vstack {
   display: block;
 }
 
->>>>>>> 53cb898d8957f2145e9d7a467b2682c0888db886:app/globals.css
 .margintop0px {
   margin-top: 0px;
 }
@@ -280,13 +273,6 @@ th::after {
   margin-top: 25px;
 }
 
-<<<<<<< HEAD:app/styles/App.css
-.-vstack {
-  display: block;
-}
-
-=======
->>>>>>> 53cb898d8957f2145e9d7a467b2682c0888db886:app/globals.css
 .marginleft0px {
   margin-left: 0px;
 }
@@ -310,8 +296,6 @@ th::after {
 .marginleft25px {
   margin-left: 25px;
 }
-<<<<<<< HEAD:app/styles/App.css
-=======
 
 /* styles/NavBar.module.css */
 .-topNav {
@@ -351,4 +335,3 @@ th::after {
   color: white;
   background: #3378ac;
 }
->>>>>>> 53cb898d8957f2145e9d7a467b2682c0888db886:app/globals.css

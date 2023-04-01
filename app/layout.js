@@ -1,7 +1,7 @@
 import Hero from '@/app/components/hero';
 import NavBar from '@/app/components/navbar';
 import VStack from '@/app/components/vstack';
-import '@/app/styles/App.css';
+import '@/app/globals.css';
 import { WAIT_URL } from '@/app/constants';
 import { v4 as uuidv4 } from 'uuid';
 
