@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
 import HStack from '@/app/components/hstack';
-import styles from '@/app/styles/navbar.module.css';
+import styles from '@/app/styles/NavBar.module.css';
 
 export default function NavBar({ data }) {
   const pathName = usePathname();
