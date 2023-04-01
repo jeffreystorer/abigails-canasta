@@ -1,4 +1,4 @@
-/* styles/NavBar.module.css */
+/* styles/navbar.module.css */
 .-topNav {
   height: 1.5rem;
   display: flex;
@@ -12,12 +12,14 @@
 .-topNav a {
   display: flex;
   align-items: center;
-  padding: 20px;
-  height: 100%;
+  padding: 5px;
+  height: 2rem;
   text-decoration: none;
   font-size: 1rem;
   border: solid 1px #3378ac;
   font-weight: 500;
+  width: 11rem;
+  justify-content: center;
 }
 
 .-topNav a:hover {

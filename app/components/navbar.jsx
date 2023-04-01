@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
-import styles from '@/app/styles/NavBar.module.css';
+import HStack from '@/app/components/hstack';
+import styles from '@/app/styles/navbar.module.css';
 
 export default function NavBar({ data }) {
   const pathName = usePathname();
@@ -40,20 +41,24 @@ export default function NavBar({ data }) {
   return (
     <>
       <nav className={styles['-topNav']}>
-        {routes
-          .filter((route) => route.show === true)
-          .map((route) => (
-            <Link
-              key={uuidv4()}
-              href={route.path}
-              className={
-                pathName === route.path
-                  ? styles['-active']
-                  : styles['-nonActive']
-              }>
-              {route.title}
-            </Link>
-          ))}
+        <HStack spacing={1}>
+          {routes
+            .filter((route) => route.show === true)
+            .map((route) => (
+              <div className={styles['-topNav a']}>
+                <Link
+                  key={uuidv4()}
+                  href={route.path}
+                  className={
+                    pathName === route.path
+                      ? styles['-active']
+                      : styles['-nonActive']
+                  }>
+                  {route.title}
+                </Link>
+              </div>
+            ))}
+        </HStack>
       </nav>
     </>
   );

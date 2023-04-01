@@ -19,7 +19,8 @@ async function getData() {
 export const revalidate = 60;
 
 export default async function Home() {
-  const data = await getData();
+  let data = await getData();
+  if (data.error.code === 400) data = [];
   if (data.length === 0)
     return (
       <>

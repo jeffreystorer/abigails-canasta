@@ -241,3 +241,59 @@ th::after {
 .wfit {
   width: fit-content;
 }
+
+.-hstack {
+  display: flex;
+}
+
+.margintop0px {
+  margin-top: 0px;
+}
+
+.margintop5px {
+  margin-top: 5px;
+}
+
+.margintop10px {
+  margin-top: 10px;
+}
+
+.margintop15px {
+  margin-top: 15px;
+}
+
+.margintop20px {
+  margin-top: 20px;
+}
+
+.margintop25px {
+  margin-top: 25px;
+}
+
+.-vstack {
+  display: block;
+}
+
+.marginleft0px {
+  margin-left: 0px;
+}
+
+.marginleft5px {
+  margin-left: 5px;
+}
+
+.marginleft10px {
+  margin-left: 10px;
+}
+
+.marginleft15px {
+  margin-left: 15px;
+}
+
+.marginleft20px {
+  margin-left: 20px;
+}
+
+.marginleft25px {
+  margin-left: 25px;
+}

@@ -1,4 +1,6 @@
 import Hero from '@/app/components/hero';
+import NavBar from '@/app/components/navbar';
+import VStack from '@/app/components/vstack';
 import '@/app/styles/App.css';
 import { WAIT_URL } from '@/app/constants';
 import { v4 as uuidv4 } from 'uuid';
@@ -27,9 +29,11 @@ export default async function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body>
-        <Hero data={data} />
-        <br />
-        {children}
+        <VStack spacing={3}>
+          <Hero />
+          <NavBar data={data} />
+          {children}
+        </VStack>
       </body>
     </html>
   );
