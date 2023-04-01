@@ -23,7 +23,7 @@ export default function NavBar({ data }) {
     },
     {
       path: '/waitlistlastweek',
-      title: 'Wait List Last Week',
+      title: 'Wait Last Week',
       show: showWait,
     },
     {
