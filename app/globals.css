@@ -241,3 +241,97 @@ th::after {
 .wfit {
   width: fit-content;
 }
+.-hstack {
+  display: flex;
+}
+
+.-vstack {
+  display: block;
+}
+
+.margintop0px {
+  margin-top: 0px;
+}
+
+.margintop5px {
+  margin-top: 5px;
+}
+
+.margintop10px {
+  margin-top: 10px;
+}
+
+.margintop15px {
+  margin-top: 15px;
+}
+
+.margintop20px {
+  margin-top: 20px;
+}
+
+.margintop25px {
+  margin-top: 25px;
+}
+
+.marginleft0px {
+  margin-left: 0px;
+}
+
+.marginleft5px {
+  margin-left: 5px;
+}
+
+.marginleft10px {
+  margin-left: 10px;
+}
+
+.marginleft15px {
+  margin-left: 15px;
+}
+
+.marginleft20px {
+  margin-left: 20px;
+}
+
+.marginleft25px {
+  margin-left: 25px;
+}
+
+/* styles/NavBar.module.css */
+.-topNav {
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+}
+
+/* Basic styles for nav links */
+.-topNav a {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  text-decoration: none;
+  font-size: 1rem;
+  border: solid 1px #3378ac;
+  font-weight: 500;
+}
+
+.-topNav a:hover {
+  background-color: #fff;
+  color: #c00;
+}
+
+/* Specific styles for non-active links */
+.-nonActive {
+  color: black;
+  background: white;
+}
+
+/* Specific styles for active links */
+.-active {
+  color: white;
+  background: #3378ac;
+}
