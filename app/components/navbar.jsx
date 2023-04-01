@@ -13,7 +13,7 @@ export default function NavBar({ data }) {
   const routes = [
     {
       path: '/',
-      title: 'Players for This Friday',
+      title: 'This Friday',
       show: true,
     },
     {
