@@ -14,6 +14,8 @@ async function getData(url) {
   return res.json();
 }
 
+export const revalidate = 10;
+
 export default async function Table({ type }) {
   const url = {
     want: WANT_URL,
