@@ -24,7 +24,6 @@ export default async function Table({ type }) {
     playerinfo: PLAYERINFO_URL,
   };
   const data = await getData(url[type]);
-  console.log('😊😊 data', data);
 
   return (
     <div className='-center'>
