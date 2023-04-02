@@ -3,7 +3,7 @@ import { PLAYERS_URL } from '@/app/constants';
 import { v4 as uuidv4 } from 'uuid';
 
 async function getData() {
-  const res = await fetch(PLAYERS_URL);
+  const res = await fetch(PLAYERS_URL, { cache: 'no-store' });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
