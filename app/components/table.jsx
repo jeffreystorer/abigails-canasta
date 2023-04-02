@@ -3,8 +3,8 @@ import TableHeader from '@/app/components/tableheader';
 
 import { WANT_URL, WAIT_URL, HOST_URL, PLAYERINFO_URL } from '@/app/constants';
 
-async function getData(url, { cache: 'no-store' }) {
-  const res = await fetch(url);
+async function getData(url) {
+  const res = await fetch(url, { cache: 'no-store' });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
