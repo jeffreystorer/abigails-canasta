@@ -6,7 +6,7 @@ import { WAIT_URL } from '@/app/constants';
 import { v4 as uuidv4 } from 'uuid';
 
 async function getData() {
-  const res = await fetch(WAIT_URL);
+  const res = await fetch(WAIT_URL, { cache: 'no-store' });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
@@ -18,6 +18,8 @@ async function getData() {
 
   return res.json();
 }
+
+export const revalidate = 10;
 
 export const metadata = {
   title: 'Abigails Canasta',
