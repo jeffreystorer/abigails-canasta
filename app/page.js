@@ -20,7 +20,6 @@ export const revalidate = 10;
 
 export default async function Home() {
   let data = await getData();
-  if (Object.prototype.toString.call(data) === '[object Object]') data = [];
   if (data.length === 0)
     return (
       <>
