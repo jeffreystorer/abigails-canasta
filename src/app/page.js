@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { PLAYERS_URL } from '@/app/constants';
+import { PLAYERS_URL } from '@/constants';
 import { v4 as uuidv4 } from 'uuid';
 
 async function getData() {
@@ -22,11 +22,7 @@ export default async function Home() {
   let data = await getData();
   if (data.length === 0)
     return (
-      <>
-        <div className='-center'>
           <h1>Next Friday&apos;s list will be available on Monday</h1>
-        </div>
-      </>
     );
   const values = data.values;
   const ths = values[0];
@@ -48,23 +44,16 @@ export default async function Home() {
   }
 
   return (
-    <>
-      <div className='-center'>
-        <ol className='-ol'>
+   
+        <ol>
           {tds.map((td, index) => (
             <li
               key={uuidv4()}
-              className='-li'
-              style={{
-                color: index < colorCount ? 'limegreen' : 'red',
-                fontWeight: 'bold',
-              }}>
-              {'   '}
+              className={index < colorCount ? 'in' : 'out'}
+            >
               {td[1]} {td[2]}
             </li>
           ))}
         </ol>
-      </div>
-    </>
   );
 }

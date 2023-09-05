@@ -1,0 +1,302 @@
+body {
+  --x: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e");
+  /* --logo: url("../assets/android-chrome-512x512.svg"); */
+  --background-blue: #00365f;
+  --background-black: #5a5a5a;
+  --background-button: #cccccc;
+  --background-button-primary: #0d63fd;
+  --background-button-secondary: #6c757d;
+  --background-secondary: #f9f9fb;
+  --background-white: #ffffff;
+  --border-hairline: 0.0625em solid #0004;
+  --borderRadius-outer: 0.5em;
+  --boxBorder: 0.05em solid var(--color-link-active);
+  --color-black: #212529;
+  --color-border-primary: #cdcdcd;
+  --color-link-active: #3378ac;
+  --color-link-hover: #c00;
+  --color-modal-fader: #b3b3b3cc;
+  --color-white: #ffffff;
+  --color-table-stripe: rgb(222, 226, 230);
+  --font-serif: "Times New Roman", Times, serif;
+  /* --font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  --font-sans-serif: sans-serif;
+  --pad: clamp(0.5em, min(2vw, 4vh), 4em);
+  --shadow-chrome: 0 0.25em 1em 0.25em #0003;
+  --page-width: 95%;
+
+  /* @link https://utopia.fyi/type/calculator?c=416,16,1.067,1920,24,1.067,6,10,900-1200-1800-600&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  --step--10: clamp(0.52rem, calc(0.45rem + 0.28vw), 0.78rem);
+  --step--9: clamp(0.56rem, calc(0.48rem + 0.3vw), 0.84rem);
+  --step--8: clamp(0.6rem, calc(0.51rem + 0.32vw), 0.89rem);
+  --step--7: clamp(0.64rem, calc(0.55rem + 0.34vw), 0.95rem);
+  --step--6: clamp(0.68rem, calc(0.58rem + 0.36vw), 1.02rem);
+  --step--5: clamp(0.72rem, calc(0.62rem + 0.38vw), 1.08rem);
+  --step--4: clamp(0.77rem, calc(0.66rem + 0.41vw), 1.16rem);
+  --step--3: clamp(0.82rem, calc(0.71rem + 0.44vw), 1.24rem);
+  --step--2: clamp(0.88rem, calc(0.76rem + 0.47vw), 1.32rem);
+  --step--1: clamp(0.94rem, calc(0.81rem + 0.5vw), 1.41rem);
+  --step-0: clamp(1rem, calc(0.86rem + 0.53vw), 1.5rem);
+  --step-1: clamp(1.07rem, calc(0.92rem + 0.57vw), 1.6rem);
+  --step-2: clamp(1.14rem, calc(0.98rem + 0.61vw), 1.71rem);
+  --step-3: clamp(1.22rem, calc(1.05rem + 0.65vw), 1.82rem);
+  --step-4: clamp(1.3rem, calc(1.12rem + 0.69vw), 1.94rem);
+  --step-5: clamp(1.38rem, calc(1.19rem + 0.74vw), 2.07rem);
+  --step-6: clamp(1.48rem, calc(1.27rem + 0.79vw), 2.21rem);
+}
+
+/*---------------------
+        RESETS
+---------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+fieldset,
+object {
+  border: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+html,
+body {
+  font-family: sans-serif;
+  min-height: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  isolation: isolate;
+  line-height: 1.2;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*---------------------
+      AT RULES
+---------------------*/
+
+/* phone only 599px */
+@media screen and (max-width: 37.4375em) {
+}
+/* tablet portrait up 600px */
+@media screen and (min-width: 37.5em) {
+}
+/* table landscape up 900px */
+@media screen and (min-width: 56.25em) {
+}
+/* desktop up 1200px */
+@media screen and (min-width: 75em) {
+}
+/* big desktop up 1800px */
+@media screen and (min-with: 112.5em) {
+}
+/*--------------------------------------
+        SELECTORS
+---------------------------------------*/
+
+a p {
+  text-align: center;
+}
+
+a,
+li,
+p,
+td {
+  font-family: var(--font-sans-serif);
+  margin-top: 0;
+}
+
+body {
+  background-color: var(--background-white);
+  display: block;
+  font-family: var(--font-sans-serif);
+  margin: auto;
+  z-index: 1;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 2em auto;
+  width: fit-content;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto 1em auto;
+}
+
+nav a,
+nav p {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-sans-serif);
+  font-size: var(--step-2);
+  font-weight: 500;
+  line-height: 1.5em;
+  margin-top: 0;
+  outline: 0;
+  overflow-wrap: break-word;
+  padding: 0 0.25em;
+  text-align: center;
+  text-decoration: none;
+  text-size-adjust: 100%;
+}
+nav a:link,
+nav a:visited {
+  color: var(--color-black);
+}
+nav a:hover,
+nav a.inactive:hover {
+  background-color: var(--color-link-hover);
+  color: var(--color-white);
+}
+nav a.active,
+.active {
+  background: var(--color-link-active);
+  color: var(--color-white);
+}
+nav a.inactive,
+.inactive {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+ol {
+  margin: 0 auto;
+  text-align: left;
+  width: fit-content;
+}
+
+ol li {
+  font-size: var(--step-4);
+  font-weight: 700;
+}
+
+.in {
+  color: limegreen;
+}
+
+.out {
+  color: red;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+  padding: 0;
+  margin: 0 auto;
+
+  /* phone only 599px */
+  @media screen and (max-width: 37.4375em) {
+    max-width: 27em;
+  }
+  /* tablet portrait up 600px */
+  @media screen and (min-width: 37.5em) {
+    width: fit-content;
+  }
+}
+
+th,
+td {
+  border: 0;
+  padding: 0;
+  text-align: center;
+  width: fit-content;
+}
+
+th[scope="col"] {
+  font-size: var(--step--3);
+  padding: 0 0.25em;
+}
+
+th[scope="row"],
+td {
+  font-size: var(--step--1);
+}
+
+th[scope="row"] {
+  font-weight: normal;
+  text-align: left;
+}
+
+:is(#want, #wait, #host) tbody > tr:nth-child(even) {
+  background-color: lightblue;
+}
+
+td::after {
+  content: attr(data-val);
+}
+
+[data-val="Y"] {
+  color: white;
+  background-color: green;
+}
+[data-val="N"] {
+  color: white;
+  background-color: red;
+}
+
+#playerinfo th,
+#playerinfo {
+  vertical-align: top;
+}
+
+#playerinfo th,
+#playerinfo td {
+  text-align: left;
+}
+
+#playerinfo tr:nth-child(4n),
+#playerinfo tr:nth-child(4n - 1) {
+  background-color: lightblue;
+}

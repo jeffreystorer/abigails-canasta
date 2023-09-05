@@ -1,11 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
 
-export default function TableHeader({ type, data }) {
+export default function TableHeader({ data }) {
   const values = data.values;
   if (values.length === 0) {
     return (
       <tr key={uuidv4()}>
-        <th className='-th'></th>
+        <th></th>
       </tr>
     );
   }
@@ -19,7 +19,7 @@ export default function TableHeader({ type, data }) {
   return (
     <tr key={uuidv4()}>
       {cols.map((col, index) => (
-        <th data-val={col} key={index} className='-th'></th>
+        <th key={index} scope='col'>{col}</th>
       ))}
     </tr>
   );

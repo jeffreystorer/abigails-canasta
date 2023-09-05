@@ -1,10 +1,9 @@
 'use client';
 
+import { Fragment } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
-import HStack from '@/app/components/hstack';
-import styles from '@/app/styles/NavBar.module.css';
 
 export default function NavBar({ data }) {
   const pathName = usePathname();
@@ -39,26 +38,22 @@ export default function NavBar({ data }) {
   ];
 
   return (
-    <>
-      <nav className={styles['-topNav']}>
-        <HStack spacing={1}>
+      <nav>
           {routes
             .filter((route) => route.show === true)
             .map((route) => (
-              <div key={uuidv4()} className={styles['-topNav a']}>
+              <Fragment key={uuidv4()}>
                 <Link
                   href={route.path}
                   className={
                     pathName === route.path
-                      ? styles['-active']
-                      : styles['-nonActive']
+                      ? 'active'
+                      : 'inactive'
                   }>
                   {route.title}
                 </Link>
-              </div>
+              </Fragment>
             ))}
-        </HStack>
       </nav>
-    </>
   );
 }

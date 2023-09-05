@@ -1,9 +1,7 @@
-import Hero from '@/app/components/hero';
-import NavBar from '@/app/components/navbar';
-import VStack from '@/app/components/vstack';
+import Hero from '@/components/hero';
+import NavBar from '@/components/navbar';
 import '@/app/globals.css';
-import { WAIT_URL } from '@/app/constants';
-import { v4 as uuidv4 } from 'uuid';
+import { WAIT_URL } from '@/constants';
 
 async function getData() {
   const res = await fetch(WAIT_URL, { cache: 'no-store' });
@@ -31,11 +29,9 @@ export default async function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body>
-        <VStack spacing={3}>
           <Hero />
           <NavBar data={data} />
           {children}
-        </VStack>
       </body>
     </html>
   );

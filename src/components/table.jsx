@@ -1,7 +1,7 @@
-import TableBody from '@/app/components/tablebody';
-import TableHeader from '@/app/components/tableheader';
+import TableBody from '@/components/tablebody';
+import TableHeader from '@/components/tableheader';
 
-import { WANT_URL, WAIT_URL, HOST_URL, PLAYERINFO_URL } from '@/app/constants';
+import { WANT_URL, WAIT_URL, HOST_URL, PLAYERINFO_URL } from '@/constants';
 
 async function getData(url) {
   const res = await fetch(url, { cache: 'no-store' });
@@ -26,15 +26,14 @@ export default async function Table({ type }) {
   const data = await getData(url[type]);
 
   return (
-    <div className='-center'>
-      <table className='-table'>
-        <thead>
-          <TableHeader type={type} data={data} />
-        </thead>
+      <table id={type}>
+        {type !== 'playerinfo' && (
+          <thead>
+          <TableHeader data={data} />
+        </thead>)}
         <tbody>
           <TableBody type={type} data={data} />
         </tbody>
       </table>
-    </div>
   );
 }
